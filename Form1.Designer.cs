@@ -164,9 +164,9 @@
             lblVez.Location = new Point(97, 75);
             lblVez.Margin = new Padding(4, 0, 4, 0);
             lblVez.Name = "lblVez";
-            lblVez.Size = new Size(264, 40);
+            lblVez.Size = new Size(265, 40);
             lblVez.TabIndex = 10;
-            lblVez.Text = "vez do Jogador: X";
+            lblVez.Text = "Vez do Jogador: X";
             // 
             // label1
             // 

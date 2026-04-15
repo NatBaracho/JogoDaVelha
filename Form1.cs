@@ -56,12 +56,12 @@ namespace JogoDaVelha
                 if (_vezDoX)
                 {
                     _pontosX++; // Soma 1 ponto para X
-                    lblX.Text = $"X = {_pontosX}"; // Atualiza o texto do placar do X
+                    lblX.Text = $"{_pontosX}"; // Atualiza o texto do placar do X
                 }
                 else
                 {
                     _pontosO++; // Soma 1 ponto para O
-                    lblO.Text = $"{_pontosO} = O"; // Atualiza o texto do placar do O
+                    lblO.Text = $"{_pontosO}"; // Atualiza o texto do placar do O
                 }
 
                 // Abre uma janelinha avisando quem venceu.
@@ -147,8 +147,8 @@ namespace JogoDaVelha
             _pontosX = 0;
             _pontosO = 0;
 
-            lblX.Text = "X = 0";
-            lblO.Text = "0 = O";
+            lblX.Text = "0";
+            lblO.Text = "0";
 
             ZerarTabuleiro();
         }

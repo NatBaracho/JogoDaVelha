@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             btn1 = new Button();
             btn2 = new Button();
             btn3 = new Button();
@@ -41,9 +42,11 @@
             lblVez = new Label();
             label1 = new Label();
             label3 = new Label();
+            btnZeraPlacar = new Button();
+            label2 = new Label();
+            label4 = new Label();
             lblX = new Label();
             lblO = new Label();
-            btnZeraPlacar = new Button();
             SuspendLayout();
             // 
             // btn1
@@ -148,6 +151,7 @@
             // lblReiniciar
             // 
             lblReiniciar.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblReiniciar.ForeColor = Color.Red;
             lblReiniciar.Location = new Point(41, 580);
             lblReiniciar.Margin = new Padding(4, 5, 4, 5);
             lblReiniciar.Name = "lblReiniciar";
@@ -160,22 +164,23 @@
             // lblVez
             // 
             lblVez.AutoSize = true;
-            lblVez.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblVez.Location = new Point(97, 75);
+            lblVez.Font = new Font("Tahoma", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblVez.Location = new Point(41, 64);
             lblVez.Margin = new Padding(4, 0, 4, 0);
             lblVez.Name = "lblVez";
-            lblVez.Size = new Size(265, 40);
+            lblVez.Size = new Size(345, 43);
             lblVez.TabIndex = 10;
             lblVez.Text = "Vez do Jogador: X";
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(601, 136);
+            label1.Font = new Font("Stencil", 16F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.ForeColor = Color.ForestGreen;
+            label1.Location = new Point(461, 195);
             label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new Size(101, 40);
+            label1.Size = new Size(141, 38);
             label1.TabIndex = 11;
             label1.Text = "Placar";
             // 
@@ -183,40 +188,18 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.Location = new Point(634, 221);
+            label3.Location = new Point(515, 279);
             label3.Margin = new Padding(4, 0, 4, 0);
             label3.Name = "label3";
             label3.Size = new Size(45, 38);
             label3.TabIndex = 14;
             label3.Text = "Vs";
             // 
-            // lblX
-            // 
-            lblX.AutoSize = true;
-            lblX.Font = new Font("Segoe UI Black", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblX.Location = new Point(507, 221);
-            lblX.Margin = new Padding(4, 0, 4, 0);
-            lblX.Name = "lblX";
-            lblX.Size = new Size(90, 38);
-            lblX.TabIndex = 15;
-            lblX.Text = "X = 0";
-            lblX.Click += lblX_Click;
-            // 
-            // lblO
-            // 
-            lblO.AutoSize = true;
-            lblO.Font = new Font("Segoe UI Black", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblO.Location = new Point(721, 221);
-            lblO.Name = "lblO";
-            lblO.Size = new Size(91, 38);
-            lblO.TabIndex = 16;
-            lblO.Text = "0 = O";
-            lblO.Click += lblO_Click;
-            // 
             // btnZeraPlacar
             // 
             btnZeraPlacar.Font = new Font("Segoe UI Black", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnZeraPlacar.Location = new Point(553, 308);
+            btnZeraPlacar.ForeColor = Color.Red;
+            btnZeraPlacar.Location = new Point(429, 437);
             btnZeraPlacar.Name = "btnZeraPlacar";
             btnZeraPlacar.Size = new Size(210, 50);
             btnZeraPlacar.TabIndex = 17;
@@ -224,14 +207,60 @@
             btnZeraPlacar.UseVisualStyleBackColor = true;
             btnZeraPlacar.Click += btnZeraPlacar_Click;
             // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI Black", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.ForeColor = Color.Coral;
+            label2.Location = new Point(439, 269);
+            label2.Name = "label2";
+            label2.Size = new Size(45, 48);
+            label2.TabIndex = 18;
+            label2.Text = "X";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI Black", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label4.ForeColor = SystemColors.Highlight;
+            label4.Location = new Point(591, 271);
+            label4.Name = "label4";
+            label4.Size = new Size(48, 48);
+            label4.TabIndex = 19;
+            label4.Text = "O";
+            // 
+            // lblX
+            // 
+            lblX.AutoSize = true;
+            lblX.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblX.ForeColor = Color.Coral;
+            lblX.Location = new Point(439, 354);
+            lblX.Name = "lblX";
+            lblX.Size = new Size(41, 48);
+            lblX.TabIndex = 20;
+            lblX.Text = "0";
+            // 
+            // lblO
+            // 
+            lblO.AutoSize = true;
+            lblO.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblO.ForeColor = SystemColors.Highlight;
+            lblO.Location = new Point(591, 354);
+            lblO.Name = "lblO";
+            lblO.Size = new Size(41, 48);
+            lblO.TabIndex = 21;
+            lblO.Text = "0";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(883, 948);
-            Controls.Add(btnZeraPlacar);
+            ClientSize = new Size(661, 689);
             Controls.Add(lblO);
             Controls.Add(lblX);
+            Controls.Add(label4);
+            Controls.Add(label2);
+            Controls.Add(btnZeraPlacar);
             Controls.Add(label3);
             Controls.Add(label1);
             Controls.Add(lblVez);
@@ -245,9 +274,11 @@
             Controls.Add(btn3);
             Controls.Add(btn2);
             Controls.Add(btn1);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(4, 5, 4, 5);
+            MaximizeBox = false;
             Name = "Form1";
-            Text = "Form1";
+            Text = "Jogo Da Velha";
             ResumeLayout(false);
             PerformLayout();
         }
@@ -267,8 +298,10 @@
         private Label lblVez;
         private Label label1;
         private Label label3;
+        private Button btnZeraPlacar;
+        private Label label2;
+        private Label label4;
         private Label lblX;
         private Label lblO;
-        private Button btnZeraPlacar;
     }
 }
